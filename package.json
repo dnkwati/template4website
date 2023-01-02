@@ -12,11 +12,11 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "node src/exe/preinstall.js",
-    ":assets": "copy-and-watch --clean --watch src/assets/**/*.* public/**/*.* out",
+    ":assets": "copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
     ":sass": "sass src/scss:out/css -w",
     ":ts": "tsc -w",
     ":dev": "browser-sync start -s -w -f ./**/{out,public} --startPath out",
-    "dev": "pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts"
+    "dev": "tsc && pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
