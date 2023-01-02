@@ -5,7 +5,8 @@
 Install the gem:
 
 ```bash
-git clone https://github.com/dnkwati/template4website.git website && cd website && pnpm install && pnpm run dev
+git clone https://github.com/dnkwati/template4website.git website && cd website
+pnpm install && pnpm run dev
 ```
 
 ### Dependencies
