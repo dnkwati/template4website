@@ -1,0 +1,13 @@
+@use '../01-settings' as *;
+
+.card-footer,
+.card-header {
+	// border: 1px solid $primary;
+	background-color: $secondary;
+}
+
+.card-header,
+.card-footer,
+.card-body {
+	padding: 0.7rem;
+}

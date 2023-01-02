@@ -1,0 +1,27 @@
+{
+  "name": "template4website",
+  "version": "1.0.0",
+  "author": "Divine Nkwati",
+  "description": "Website - Project template.",
+  "type": "module",
+  "keywords": [
+    "sass",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "node src/exe/preinstall.js",
+    ":assets": "copy-and-watch --clean --watch src/assets/**/*.* public/**/*.* out",
+    ":sass": "sass src/scss:out/css -w",
+    ":ts": "tsc -w",
+    ":dev": "browser-sync start -s -w -f ./**/{out,public} --startPath out",
+    "dev": "pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "copy-and-watch": "^0.1.6",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4"
+  }
+}

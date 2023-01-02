@@ -1,2 +1,5 @@
-# template4website
-Website - Project template.
+# Website - Project template.
+
+# License
+
+MIT license, see LICENSE.

@@ -1,0 +1,7 @@
+@use '01-settings' as *;
+@forward '06-components';
+
+.container {
+	color: $primary;
+	font-family: $font;
+}
