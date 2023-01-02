@@ -16,7 +16,7 @@
     ":sass": "sass src/scss:out/css -w",
     ":ts": "tsc -w",
     ":dev": "browser-sync start -s -w -f ./**/{out,public} --startPath out",
-    "dev": "tsc && pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts"
+    "dev": "(rm -rf out && tsc) && (pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts)"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
