@@ -2,8 +2,6 @@
 
 ## Installation
 
-Install dependencies:
-
 ```bash
 git clone https://github.com/dnkwati/template4website.git website
 cd website && pnpm i && pnpm run dev
