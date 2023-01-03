@@ -11,12 +11,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "preinstall": "node src/exe/preinstall.js",
-    ":assets": "copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
-    ":sass": "sass src/scss:out/css -w",
-    ":ts": "tsc -w",
-    ":dev": "browser-sync start -s -w -f ./**/{out,public} --startPath out",
-    "dev": "(rm -rf out) && (pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts)"
+    ":assets": "./node_modules/.bin/copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
+    ":dev": "./node_modules/.bin/browser-sync start -s -w -f ./**/{out,public} --startPath out",
+    ":sass": "./node_modules/.bin/sass src/scss:out/css -w",
+    ":ts": "./node_modules/.bin/tsc -w",
+    "dev": "(rm -rf out) && (pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts)",
+    "dist": "rm -rf dist && pnpm run dist:assets && pnpm run dist:css && pnpm run dist:js",
+    "dist:assets": "./node_modules/.bin/copy-and-watch src/assets/**/*.* public/**/*.* dist",
+    "dist:css": "./node_modules/.bin/sass src/scss:dist/css",
+    "dist:js": "./node_modules/.bin/tsc --outDir dist/js/module",
+    "preinstall": "node run src/exe/preinstall.js"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
