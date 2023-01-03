@@ -5,6 +5,7 @@ import { exec } from 'child_process';
 const tempDir = 'temp';
 const rootDir = 'src';
 const repos = {
+	[`${rootDir}/bash`]: 'https://github.com/dnkwati/template4bash.git',
 	[`${rootDir}/scss`]: 'https://github.com/dnkwati/template4sass.git',
 	[`${rootDir}/ts`]: 'https://github.com/dnkwati/template4ts.git',
 };

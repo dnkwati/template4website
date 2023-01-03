@@ -19,23 +19,24 @@
     "url": "https://github.com/dnkwati/template4website.git"
   },
   "scripts": {
-    ":assets": "./node_modules/.bin/copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
-    ":dev": "./node_modules/.bin/browser-sync start -s -w -f ./**/{out,public} --startPath out",
-    ":sass": "./node_modules/.bin/sass src/scss:out/css -w",
-    ":ts": "./node_modules/.bin/tsc -w",
-    "dev": "(rm -rf out) && (pnpm run :dev & pnpm run :assets & pnpm run :sass & pnpm run :ts)",
-    "dist": "rm -rf dist && pnpm run dist:assets && pnpm run dist:css && pnpm run dist:js",
-    "dist:assets": "./node_modules/.bin/copy-and-watch src/assets/**/*.* public/**/*.* dist",
-    "dist:css": "./node_modules/.bin/sass src/scss:dist/css",
-    "dist:js": "./node_modules/.bin/tsc --outDir dist/js/module",
+    "dev": "rm -rf out && bash src/bash/exe.sh dev.scss & bash src/bash/exe.sh dev.mjs & bash src/bash/exe.sh dev.js & bash src/bash/exe.sh dev.assets & bash src/bash/exe.sh dev.watch",
+    "dev.assets": "./node_modules/.bin/copy-and-watch",
+    "dev.js": "./node_modules/.bin/esbuild",
+    "dev.mjs": "./node_modules/.bin/tsc",
+    "dev.scss": "./node_modules/.bin/sass",
+    "dev.watch": "./node_modules/.bin/browser-sync",
+    "dist": "rm -rf dist && (bash src/bash/exe.sh dist.scss && bash src/bash/exe.sh dist.css) && (bash src/bash/exe.sh dist.mjs && bash src/bash/exe.sh dist.js) && bash src/bash/exe.sh dist.assets",
+    "dist.assets": "./node_modules/.bin/copy-and-watch",
+    "dist.css": "./node_modules/.bin/esbuild",
+    "dist.js": "./node_modules/.bin/esbuild",
+    "dist.mjs": "./node_modules/.bin/tsc",
+    "dist.scss": "./node_modules/.bin/sass",
     "preinstall": "node src/exe/preinstall.js"
   },
   "devDependencies": {
-    "terser": "latest",
-    "cssnano": "latest",
-    "postcss-cli": "latest",
     "browser-sync": "latest",
     "copy-and-watch": "latest",
+    "esbuild": "latest",
     "sass": "latest",
     "typescript": "latest"
   }
