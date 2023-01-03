@@ -1,7 +1,6 @@
 {
   "name": "template4website",
   "version": "1.0.0",
-  "author": "Divine Nkwati",
   "description": "Website - Project template.",
   "type": "module",
   "keywords": [
@@ -10,6 +9,11 @@
     "css"
   ],
   "license": "MIT",
+  "author": "Nkwati Divine <drnkwati+github@gmail.com> (https://github.com/drnkwati)",
+  "homepage": "https://github.com/dnkwati/template4website#readme",
+  "bugs": {
+    "url": "https://github.com/dnkwati/template4website/issues"
+  },
   "scripts": {
     ":assets": "./node_modules/.bin/copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
     ":dev": "./node_modules/.bin/browser-sync start -s -w -f ./**/{out,public} --startPath out",
