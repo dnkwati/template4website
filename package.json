@@ -14,6 +14,10 @@
   "bugs": {
     "url": "https://github.com/dnkwati/template4website/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnkwati/template4website.git"
+  },
   "scripts": {
     ":assets": "./node_modules/.bin/copy-and-watch --watch src/assets/**/*.* public/**/*.* out",
     ":dev": "./node_modules/.bin/browser-sync start -s -w -f ./**/{out,public} --startPath out",
@@ -28,8 +32,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
-    "copy-and-watch": "^0.1.6",
-    "sass": "^1.57.1",
-    "typescript": "^4.9.4"
+    "copy-and-watch": "latest",
+    "sass": "latest",
+    "typescript": "latest"
   }
 }
