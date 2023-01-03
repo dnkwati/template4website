@@ -20,7 +20,7 @@
     "dist:assets": "./node_modules/.bin/copy-and-watch src/assets/**/*.* public/**/*.* dist",
     "dist:css": "./node_modules/.bin/sass src/scss:dist/css",
     "dist:js": "./node_modules/.bin/tsc --outDir dist/js/module",
-    "preinstall": "node run src/exe/preinstall.js"
+    "preinstall": "node src/exe/preinstall.js"
   },
   "devDependencies": {
     "browser-sync": "^2.27.11",
