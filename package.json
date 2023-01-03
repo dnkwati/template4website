@@ -31,6 +31,9 @@
     "preinstall": "node src/exe/preinstall.js"
   },
   "devDependencies": {
+    "terser": "latest",
+    "cssnano": "latest",
+    "postcss-cli": "latest",
     "browser-sync": "latest",
     "copy-and-watch": "latest",
     "sass": "latest",
