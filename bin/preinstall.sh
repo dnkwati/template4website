@@ -26,6 +26,11 @@ commands+=("$handler run bootstrap")
 #
 # EXECUTE
 eval "${commands[*]}"
+#
+# REMOVE GIT TEMPLATE ORIGIN
+if [ -f "$workDir/.git/config" ]; then
+	if grep -q 'template4website.git' "$workDir/.git/config"; then rm -rf "$workDir/.git"; fi
+fi
 # ------------------------------------------------------------------------------------------------------------------
 # END
 # ------------------------------------------------------------------------------------------------------------------

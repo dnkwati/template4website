@@ -25,4 +25,6 @@ dist-ssr
 *.sw?
 
 @install
+pub
+dev
 out
