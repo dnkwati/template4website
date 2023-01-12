@@ -1,5 +1,17 @@
 {
     "name": "dnkwati/template4website",
+    "version": "1.0.0",
+    "description": "Website - Project template.",
+    "keywords": [
+        "typescript",
+        "javascript",
+        "stylesheet",
+        "sass",
+        "scss",
+        "css"
+    ],
+    "homepage": "https://github.com/dnkwati/template4website#readme",
+    "license": "MIT",
     "type": "project",
     "authors": [
         {
@@ -7,15 +19,19 @@
             "email": "drnkwati+github@gmail.com"
         }
     ],
+    "support": {
+        "issues": "https://github.com/dnkwati/template4website/issues",
+        "source": "https://github.com/dnkwati/template4website.git"
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/reglue4shell/bash.git"
         }
     ],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "require": {
+    "require-dev": {
         "reglue4shell/bash": "dev-main"
-    }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
 }

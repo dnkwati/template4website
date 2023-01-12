@@ -4,6 +4,9 @@
   "description": "Website - Project template.",
   "type": "module",
   "keywords": [
+    "typescript",
+    "javascript",
+    "stylesheet",
     "sass",
     "scss",
     "css"
