@@ -19,19 +19,10 @@
     "url": "https://github.com/dnkwati/template4website.git"
   },
   "scripts": {
-    "dev": "rm -rf out && bash src/bash/exe.sh dev.scss & bash src/bash/exe.sh dev.mjs & bash src/bash/exe.sh dev.js & bash src/bash/exe.sh dev.assets & bash src/bash/exe.sh dev.watch",
-    "dev.assets": "./node_modules/.bin/copy-and-watch",
-    "dev.js": "./node_modules/.bin/esbuild",
-    "dev.mjs": "./node_modules/.bin/tsc",
-    "dev.scss": "./node_modules/.bin/sass",
-    "dev.watch": "./node_modules/.bin/browser-sync",
-    "dist": "rm -rf dist && (bash src/bash/exe.sh dist.scss && bash src/bash/exe.sh dist.css) && (bash src/bash/exe.sh dist.mjs && bash src/bash/exe.sh dist.js) && bash src/bash/exe.sh dist.assets",
-    "dist.assets": "./node_modules/.bin/copy-and-watch",
-    "dist.css": "./node_modules/.bin/esbuild",
-    "dist.js": "./node_modules/.bin/esbuild",
-    "dist.mjs": "./node_modules/.bin/tsc",
-    "dist.scss": "./node_modules/.bin/sass",
-    "preinstall": "node src/exe/preinstall.js"
+    "bootstrap": "./vendor/bin/reglue4shellBashBootstrapper.sh -m web",
+    "dist": "./vendor/bin/reglue4shellBashScriptBundler.sh -m dist",
+    "dev": "./vendor/bin/reglue4shellBashScriptBundler.sh -m dev",
+    "preinstall": "./bin/preinstall.sh"
   },
   "devDependencies": {
     "browser-sync": "latest",

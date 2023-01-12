@@ -1,0 +1,21 @@
+{
+    "name": "dnkwati/website",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Nkwati Divine",
+            "email": "drnkwati+github@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/reglue4shell/bash.git"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "require": {
+        "reglue4shell/bash": "dev-main"
+    }
+}

@@ -1,0 +1,5 @@
+scss@https://github.com/dnkwati/template4scss/archive/refs/tags/v1.0.0.zip
+ts@https://github.com/dnkwati/template4ts/archive/refs/tags/v1.0.0.zip
+
+scss@https://github.com/dnkwati/template4sass.git
+ts@https://github.com/dnkwati/template4ts.git
