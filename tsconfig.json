@@ -4,13 +4,14 @@
     "watchDirectory": "useFsEvents",
     "fallbackPolling": "dynamicPriority",
     "synchronousWatchDirectory": true,
-    "excludeDirectories": ["**/node_modules", "**/*.spec.ts", "**/dev"]
+    "excludeDirectories": ["**/node_modules", "**/*.spec.ts", "**/dist"]
   },
   "compilerOptions": {
+    "removeComments": true,
     "target": "es6",
     "module": "es2015",
     "rootDir": "./src/ts",
-    "outDir": "./dev/js/module",
+    "outDir": "./dist/js/module",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
